@@ -1,21 +1,21 @@
 import React from 'react';
 import styles from '../styles/UserCard.scss';
 
-export default function UserCard(props) {
+export default function UserCard({name, city, company, id, handleUserSelecting}) {
   return (
     <div className={styles.card}>
       <div className={styles.info}>
         <span>
-          ФИО: <b>{props.name}</b>
+          ФИО: <b>{name}</b>
         </span>
         <span>
-          город: <b>{props.city}</b>
+          город: <b>{city}</b>
         </span>
         <span>
-          компания: <b>{props.company}</b>
+          компания: <b>{company}</b>
         </span>
       </div>
-      <a href="#">Подробнее</a>
+      <button onClick={() => handleUserSelecting(id)}>Подробнее</button>
     </div>
   );
 }

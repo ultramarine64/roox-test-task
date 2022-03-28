@@ -1,10 +1,12 @@
 import React from 'react';
 import UserFilters from './components/UserFilters';
+import UserDetails from './components/UserDetails';
 import UsersList from './components/UsersList'
 import styles from './styles/App.scss'
 
 export default function App() {
   const [usersData, setUsersData] = React.useState(null);
+  const [selectedUser, setSelectedUser] = React.useState(null);
 
   React.useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -28,16 +30,26 @@ export default function App() {
     setUsersData(prevUsersData => prevUsersData.slice().sort(compareByCompanies));
   }
 
+  function handleUserSelecting(selectedId) {
+    setSelectedUser(usersData.find((user) => user.id === selectedId));
+  }
+
   return (
     usersData
     ?
-    <div className={styles.main}>
-      <UserFilters handleSortingByCity={handleSortingByCity}
-                   handleSortingByCompanies={handleSortingByCompanies}
-      />
-      <UsersList usersData={usersData} />
-    </div>
+      <div className={styles.main}>
+        <UserFilters handleSortingByCity={handleSortingByCity}
+                     handleSortingByCompanies={handleSortingByCompanies}
+        />
+        {
+          selectedUser
+          ?
+            <UserDetails userData={selectedUser} />
+          :
+            <UsersList usersData={usersData} handleUserSelecting={handleUserSelecting} />
+        }
+      </div>
     :
-    null
+      null
   );
 }

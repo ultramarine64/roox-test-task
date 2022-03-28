@@ -11,7 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-button {
+button, input[type="submit"] {
   outline: none;
   text-decoration: none;
   text-transform: none;

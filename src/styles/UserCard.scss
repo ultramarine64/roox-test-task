@@ -10,15 +10,20 @@
   line-height: 13px;
   border-radius: 8px;
 
-  a {
+  button {
     align-self: flex-end;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 14px;
+    background-color: transparent;
     color: #4B51EF;
     text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
