@@ -77,13 +77,11 @@
       margin-top: 0px;
     }
 
-    input {
-      margin-top: 3px;
-      padding: 5px 10px;
+    input, textarea {
       background: #FFFFFF;
       border: 1px solid #D8D8D8;
       border-radius: 5px;
-      width: 211px;
+      padding: 5px 10px;
 
       font-family: 'Roboto';
       font-style: normal;
@@ -95,14 +93,20 @@
       &:disabled {
         color: rgba(0, 0, 0, 0.3);
       }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input {
+      margin-top: 3px;
+      width: 211px;
     }
 
     textarea {
       resize: none;
       height: 55px;
-      background: #FFFFFF;
-      border: 1px solid #D8D8D8;
-      border-radius: 5px;
     }
   }
 }
