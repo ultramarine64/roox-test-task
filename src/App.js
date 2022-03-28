@@ -19,7 +19,6 @@ export default function App() {
     const compareByCities = function(userA, userB) {
       return userA.address.city.localeCompare(userB.address.city);
     }
-
     setUsersData(prevUsersData => prevUsersData.slice().sort(compareByCities));
   }
 
@@ -27,7 +26,6 @@ export default function App() {
     const compareByCompanies = function(userA, userB) {
       return userA.company.name.localeCompare(userB.company.name);
     }
-
     setUsersData(prevUsersData => prevUsersData.slice().sort(compareByCompanies));
   }
 
@@ -39,15 +37,19 @@ export default function App() {
     usersData
     ?
       <main className={styles.main}>
-        <UserFilters handleSortingByCity={handleSortingByCity}
-                     handleSortingByCompanies={handleSortingByCompanies}
+        <UserFilters
+          handleSortingByCity={handleSortingByCity}
+          handleSortingByCompanies={handleSortingByCompanies}
         />
         {
           selectedUser
           ?
             <UserDetails userData={selectedUser} />
           :
-            <UsersList usersData={usersData} handleUserSelecting={handleUserSelecting} />
+            <UsersList
+              usersData={usersData}
+              handleUserSelecting={handleUserSelecting}
+            />
         }
       </main>
     :

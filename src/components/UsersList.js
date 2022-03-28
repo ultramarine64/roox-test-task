@@ -6,12 +6,13 @@ export default function UsersList({usersData, handleUserSelecting}) {
   function generateUserCards() {
     return usersData.map(user => {
       return (
-        <UserCard name={user.name}
-                  city={user.address.city}
-                  company={user.company.name}
-                  key={user.id}
-                  id={user.id}
-                  handleUserSelecting={handleUserSelecting}
+        <UserCard
+          name={user.name}
+          city={user.address.city}
+          company={user.company.name}
+          key={user.id}
+          id={user.id}
+          handleUserSelecting={handleUserSelecting}
         />
       );
     });
