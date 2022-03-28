@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/UserFilters.scss'
+import styles from '../styles/UserFilters.scss';
 
 export default function UserFilters({handleSortingByCity, handleSortingByCompanies}) {
   return (

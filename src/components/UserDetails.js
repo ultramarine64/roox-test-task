@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/UserDetails.scss'
+import styles from '../styles/UserDetails.scss';
 
 export default function UserDetails({userData}) {
   const [isEditable, setEditable] = React.useState(false);

@@ -1,8 +1,8 @@
 import React from 'react';
 import UserFilters from './components/UserFilters';
 import UserDetails from './components/UserDetails';
-import UsersList from './components/UsersList'
-import styles from './styles/App.scss'
+import UsersList from './components/UsersList';
+import styles from './styles/App.scss';
 
 export default function App() {
   const [usersData, setUsersData] = React.useState(null);
@@ -37,7 +37,7 @@ export default function App() {
   return (
     usersData
     ?
-      <div className={styles.main}>
+      <main className={styles.main}>
         <UserFilters handleSortingByCity={handleSortingByCity}
                      handleSortingByCompanies={handleSortingByCompanies}
         />
@@ -48,7 +48,7 @@ export default function App() {
           :
             <UsersList usersData={usersData} handleUserSelecting={handleUserSelecting} />
         }
-      </div>
+      </main>
     :
       null
   );
