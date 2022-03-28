@@ -1,0 +1,30 @@
+.container {
+  margin: 18px 62px 24px 34px;
+}
+
+.content {
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .usersNumber {
+    margin-top: 2px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    align-self: flex-end;
+  }
+}
