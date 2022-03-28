@@ -44,7 +44,7 @@ export default function UserDetails({userData}) {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="username">User Name</label>
@@ -54,7 +54,7 @@ export default function UserDetails({userData}) {
           name="username"
           value={formData.username}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="email">E-mail</label>
@@ -64,7 +64,7 @@ export default function UserDetails({userData}) {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="street">Street</label>
@@ -74,7 +74,7 @@ export default function UserDetails({userData}) {
           name="street"
           value={formData.street}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="city">City</label>
@@ -84,7 +84,7 @@ export default function UserDetails({userData}) {
           name="city"
           value={formData.city}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="zipcode">Zip code</label>
@@ -94,7 +94,7 @@ export default function UserDetails({userData}) {
           name="zipcode"
           value={formData.zipcode}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="phone">Phone</label>
@@ -104,7 +104,7 @@ export default function UserDetails({userData}) {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="website">Website</label>
@@ -114,7 +114,7 @@ export default function UserDetails({userData}) {
           name="website"
           value={formData.website}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
 
         <label htmlFor="comment">Comment</label>
@@ -123,7 +123,7 @@ export default function UserDetails({userData}) {
           name="comment"
           value={formData.comment}
           onChange={handleChange}
-          disabled={!isEditable}
+          readOnly={!isEditable}
         />
       </form>
       <input type="submit" form="userform" disabled={!isEditable} />
