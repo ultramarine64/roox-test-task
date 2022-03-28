@@ -3,6 +3,7 @@ import UserFilters from './components/UserFilters';
 import UserDetails from './components/UserDetails';
 import UsersList from './components/UsersList';
 import styles from './styles/App.scss';
+import {Oval} from 'react-loader-spinner';
 
 export default function App() {
   const [usersData, setUsersData] = React.useState(null);
@@ -50,6 +51,17 @@ export default function App() {
         }
       </main>
     :
-      null
+      <Oval
+        color="#00BFFF"
+        secondaryColor="#000000"
+        height="30vh"
+        width="30vh"
+        wrapperStyle={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginTop: "35vh"
+        }}
+      />
   );
 }
