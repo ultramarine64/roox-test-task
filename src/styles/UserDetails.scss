@@ -97,6 +97,10 @@
       &:focus {
         outline: none;
       }
+
+      &:invalid {
+        border-color: #D91313;
+      }
     }
 
     input {

@@ -45,6 +45,7 @@ export default function UserDetails({userData}) {
           value={formData.name}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
         <label htmlFor="username">User Name</label>
@@ -55,6 +56,7 @@ export default function UserDetails({userData}) {
           value={formData.username}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
         <label htmlFor="email">E-mail</label>
@@ -65,6 +67,7 @@ export default function UserDetails({userData}) {
           value={formData.email}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
         <label htmlFor="street">Street</label>
@@ -75,6 +78,7 @@ export default function UserDetails({userData}) {
           value={formData.street}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
         <label htmlFor="city">City</label>
@@ -85,6 +89,7 @@ export default function UserDetails({userData}) {
           value={formData.city}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
         <label htmlFor="zipcode">Zip code</label>
@@ -92,9 +97,11 @@ export default function UserDetails({userData}) {
           type="text"
           id="zipcode"
           name="zipcode"
+          pattern="[0-9][0-9-]*"
           value={formData.zipcode}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
         <label htmlFor="phone">Phone</label>
@@ -105,8 +112,13 @@ export default function UserDetails({userData}) {
           value={formData.phone}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
+        {
+          // @note Валидатор будет ругаться на сайты без https-префикса.
+          // @todo Реализовать собственную валидацию.
+        }
         <label htmlFor="website">Website</label>
         <input
           type="url"
@@ -115,6 +127,7 @@ export default function UserDetails({userData}) {
           value={formData.website}
           onChange={handleChange}
           readOnly={!isEditable}
+          required
         />
 
         <label htmlFor="comment">Comment</label>
